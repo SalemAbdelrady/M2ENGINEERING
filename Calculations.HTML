@@ -1,0 +1,696 @@
+<!--
+Name: Salem Abdelrady Salem Aly
+ID : 1951710316
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>M² ENGINEERING.com</title>
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <style>
+    /* Reset and Base */
+    body, ul, li, h1, a, nav, div, form {
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      font-family: "Cairo", sans-serif;
+    }
+    :root {
+      --primary: #1a73e8;
+      --secondary: #34a853;
+      --accent: #fbbc05;
+      --danger: #ff6b6b;
+      --dark: #1a1a1a;
+      --light: #f8f9fa;
+      --overlay: rgba(255, 255, 255, 0.05);
+    }
+    body {
+      background-color: #ECE9E5;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url("img/bannar002.png") no-repeat center center/cover fixed;
+      color: var(--light);
+      min-height: 100vh;
+      direction: ltr;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      width: 100%;
+      height: 60px;
+      background-color: #ECE9E5;
+      z-index: 1;
+      text-align: center;
+      top: 0;
+
+    }
+    header img {
+      position: absolute;
+      left: 90px;
+      top: 2px;
+      max-width: 18%;
+    }
+    .main-nav {
+      float: right;
+      padding: 12px 30px;
+    }
+    .main-nav > ul > li {
+      display: inline-block;
+      margin: 0;
+      list-style: none;
+    }
+    .main-nav li a {
+      text-decoration: none;
+      font-size: 19px;
+      color: black;
+      padding: 4px 25px;
+      border-radius: 28.8px;
+      display: inline-block;
+    }
+    .main-nav > ul > li:hover a {
+      background-color: #92B3C2;
+    }
+    /* Main */
+
+    main {
+      max-width: 100%;
+      width: 1200px;
+      margin: 80px auto;
+      padding: 0 40px;
+      box-sizing: border-box;
+      text-align: left;
+      
+    }
+    .ar1 {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .ar1 img {
+      max-width: 345px;
+      margin: 0 50px;
+      transition: transform 0.3s;
+    }
+    .ar1 img:hover {
+      transform: translateY(-10px);
+    }
+    .content {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      flex: 1;
+      color: #000;
+
+    }
+    .content h2 {
+      color: #015552;
+    }
+
+/* Form */
+.form-container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-top: 40px;
+  color: #000;
+  gap: 20px; 
+}
+
+.form-container img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container form {
+  flex: 1;
+  min-width: 280px;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container label {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.form-container button {
+  background: linear-gradient(45deg, #007BFF, #0056b3);
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-container button:hover {
+  background: linear-gradient(45deg, #0056b3, #003f7f);
+}
+
+    /*###############__________________________footer__________________________###############*/
+
+.footer-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #282828;
+  color: #fff;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-column {
+  text-align: center;
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-widget h3 {
+  color: #92B3C2;
+}
+
+.footer-widget .menu {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-widget .menu li {
+  margin: 5px 0;
+}
+
+.footer-widget .menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-widget .menu a:hover {
+  text-decoration: underline;
+}
+
+.footer-below {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-logo, .stripe-badge {
+  max-width: 100%;
+  height: auto;
+}
+
+.social-links {
+  list-style-type: none;
+  padding: 0;
+}
+.social-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-links a {
+  font-size: 35px;
+  color: white;
+  border-radius: 28.8px;
+  border-top-color: #eee;
+}
+
+.social-links a:hover{
+  background-color: #92B3C2;
+}
+
+    /*###############__________________________form-container__________________________###############*/
+    .form-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+#language-switch {
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#language-switch:hover {
+  background-color: #0056b3;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group select,
+#inputs input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+#language-switch {
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+
+#title {
+  margin: 10px 0;
+}
+
+
+
+#calculate-button {
+    margin-top: 15px;
+    background: #2ecc71;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+#calculate-button:hover {
+  background: linear-gradient(45deg, #218838, #1e7e34);
+}
+
+#calculate-button:hover {
+    background: #27ae60;
+  }
+  #result {
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    display: none;
+    animation: fadeIn 1s forwards;
+  }
+  .area-result {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  .perimeter-result {
+    background-color: #d1ecf1;
+    color: #0c5460;
+  }
+  .volume-result {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="img/logo000.png" alt="logo">
+  <nav class="main-nav">
+    <ul>
+      <li><a href="Home_page.html">Home</a></li>
+      <li><a href="Calculations.html">Calculations</a></li>
+      <li><a class="Book_a_consult" href="Home_page.html#contactForm">Book a consult</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<div class="form-container">
+  <div class="form-header">
+    <button id="language-switch" onclick="switchLanguage()">العربية</button>
+    <h1 id="title">Geometric Calculations</h1>
+  </div>
+
+  <form class="form-content">
+    <div class="form-group">
+      <label for="shape" id="shape-label">Choose a geometric shape:</label>
+      <select id="shape" onchange="updateFields()">
+        <option value="square">Square</option>
+        <option value="rectangle">Rectangle</option>
+        <option value="triangle">Triangle</option>
+        <option value="circle">Circle</option>
+        <option value="cube">Cube</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="unit" id="unit-label">Choose a unit:</label>
+      <select id="unit">
+        <option value="cm">📏 cm</option>
+        <option value="m">📐 m</option>
+        <option value="inch">📎 inch</option>
+      </select>
+    </div>
+
+    <div id="inputs" class="form-group"></div>
+
+    <button type="button" onclick="calculate()" id="calculate-button">Calculate</button>
+
+    <div id="result"></div>
+  </form>
+</div>
+</main>
+
+<!-- JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+
+  // Scroll header color change
+  const header = document.querySelector('header');
+  window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    header.style.backgroundColor = scrollPosition > 2 ? 'white' : '#ECE9E5';
+  });
+
+  // Contact form handler
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const address = document.getElementById('address').value;
+    const mailtoLink = `mailto:injezny@gmail.com?subject=Customer Data&body=Name: ${name}%0AEmail: ${email}%0AAddress: ${address}`;
+    window.location.href = mailtoLink;
+    this.reset();
+  });
+</script>
+
+<script>
+  // لتغيير اللغة 
+  const translations = {
+      en: {
+          title: "Geometric Calculations",
+          shapeLabel: "Choose a geometric shape:",
+          unitLabel: "Choose a unit:",
+          calculateButton: "Calculate",
+          languageSwitch: "العربية",
+          results: {
+              area: "Area",
+              perimeter: "Perimeter",
+              volume: "Volume",
+              surfaceArea: "Surface Area"
+          },
+          inputs: {
+              side: "Side length",
+              length: "Length",
+              width: "Width",
+              base: "Base",
+              height: "Height",
+              radius: "Radius"
+          },
+          shapes: {
+              square: "Square",
+              rectangle: "Rectangle",
+              triangle: "Triangle",
+              circle: "Circle",
+              cube: "Cube"
+          }
+      },
+      ar: {
+          title: "حسابات هندسية",
+          shapeLabel: "اختر الشكل الهندسي:",
+          unitLabel: "اختر وحدة القياس:",
+          calculateButton: "احسب",
+          languageSwitch: "English",
+          results: {
+              area: "المساحة",
+              perimeter: "المحيط",
+              volume: "الحجم",
+              surfaceArea: "المساحة السطحية"
+          },
+          inputs: {
+              side: "طول الضلع",
+              length: "الطول",
+              width: "العرض",
+              base: "القاعدة",
+              height: "الارتفاع",
+              radius: "نصف القطر"
+          },
+          shapes: {
+              square: "مربع",
+              rectangle: "مستطيل",
+              triangle: "مثلث",
+              circle: "دائرة",
+              cube: "مكعب"
+          }
+      }
+  };
+  
+  let currentLanguage = "en";
+  
+  function switchLanguage() {
+      currentLanguage = currentLanguage === "en" ? "ar" : "en";
+  
+      document.getElementById("title").textContent = translations[currentLanguage].title;
+      document.getElementById("shape-label").textContent = translations[currentLanguage].shapeLabel;
+      document.getElementById("unit-label").textContent = translations[currentLanguage].unitLabel;
+      document.getElementById("calculate-button").textContent = translations[currentLanguage].calculateButton;
+      document.getElementById("language-switch").textContent = translations[currentLanguage].languageSwitch;
+  
+      const shapeSelect = document.getElementById("shape");
+      shapeSelect.innerHTML = `
+        <option value="square">${translations[currentLanguage].shapes.square}</option>
+        <option value="rectangle">${translations[currentLanguage].shapes.rectangle}</option>
+        <option value="triangle">${translations[currentLanguage].shapes.triangle}</option>
+        <option value="circle">${translations[currentLanguage].shapes.circle}</option>
+        <option value="cube">${translations[currentLanguage].shapes.cube}</option>
+      `;
+  
+      updateFields();
+  }
+  
+  function updateFields() {
+      const shape = document.getElementById("shape").value;
+      const inputsDiv = document.getElementById("inputs");
+      inputsDiv.innerHTML = "";
+  
+      if (shape === "square") {
+          inputsDiv.innerHTML += `<label>${translations[currentLanguage].inputs.side}:</label><input type='number' id='side'>`;
+      } else if (shape === "rectangle") {
+          inputsDiv.innerHTML += `<label>${translations[currentLanguage].inputs.length}:</label><input type='number' id='length'>`;
+          inputsDiv.innerHTML += `<label>${translations[currentLanguage].inputs.width}:</label><input type='number' id='width'>`;
+      } else if (shape === "triangle") {
+          inputsDiv.innerHTML += `<label>${translations[currentLanguage].inputs.base}:</label><input type='number' id='base'>`;
+          inputsDiv.innerHTML += `<label>${translations[currentLanguage].inputs.height}:</label><input type='number' id='height'>`;
+          inputsDiv.innerHTML += `<label>${translations[currentLanguage].inputs.side} (another side):</label><input type='number' id='side1'>`;
+          inputsDiv.innerHTML += `<label>${translations[currentLanguage].inputs.side} (another side):</label><input type='number' id='side2'>`;
+      } else if (shape === "circle") {
+          inputsDiv.innerHTML += `<label>${translations[currentLanguage].inputs.radius}:</label><input type='number' id='radius'>`;
+      } else if (shape === "cube") {
+          inputsDiv.innerHTML += `<label>${translations[currentLanguage].inputs.side}:</label><input type='number' id='side'>`;
+      }
+  }
+  
+  function calculate() {
+      const shape = document.getElementById("shape").value;
+      const unit = document.getElementById("unit").value.replace(/[^a-zA-Z]/g, ""); // Remove emoji
+      const result = document.getElementById("result");
+      result.className = '';
+      result.style.display = 'block';
+      let output = "";
+  
+      if (shape === "square") {
+          const side = parseFloat(document.getElementById("side").value);
+          const area = side * side;
+          const perimeter = 4 * side;
+          output = `<div class='area-result'>${translations[currentLanguage].results.area}: ${area} ${unit}²</div><div class='perimeter-result'>${translations[currentLanguage].results.perimeter}: ${perimeter} ${unit}</div>`;
+      } else if (shape === "rectangle") {
+          const length = parseFloat(document.getElementById("length").value);
+          const width = parseFloat(document.getElementById("width").value);
+          const area = length * width;
+          const perimeter = 2 * (length + width);
+          output = `<div class='area-result'>${translations[currentLanguage].results.area}: ${area} ${unit}²</div><div class='perimeter-result'>${translations[currentLanguage].results.perimeter}: ${perimeter} ${unit}</div>`;
+      } else if (shape === "triangle") {
+          const base = parseFloat(document.getElementById("base").value);
+          const height = parseFloat(document.getElementById("height").value);
+          const side1 = parseFloat(document.getElementById("side1").value);
+          const side2 = parseFloat(document.getElementById("side2").value);
+          const area = 0.5 * base * height;
+          const perimeter = base + side1 + side2;
+          output = `<div class='area-result'>${translations[currentLanguage].results.area}: ${area} ${unit}²</div><div class='perimeter-result'>${translations[currentLanguage].results.perimeter}: ${perimeter} ${unit}</div>`;
+      } else if (shape === "circle") {
+          const radius = parseFloat(document.getElementById("radius").value);
+          const area = Math.PI * radius * radius;
+          const perimeter = 2 * Math.PI * radius;
+          output = `<div class='area-result'>${translations[currentLanguage].results.area}: ${area.toFixed(2)} ${unit}²</div><div class='perimeter-result'>${translations[currentLanguage].results.perimeter}: ${perimeter.toFixed(2)} ${unit}</div>`;
+      } else if (shape === "cube") {
+          const side = parseFloat(document.getElementById("side").value);
+          const surfaceArea = 6 * side * side;
+          const volume = Math.pow(side, 3);
+          output = `<div class='area-result'>${translations[currentLanguage].results.surfaceArea}: ${surfaceArea} ${unit}²</div><div class='volume-result'>${translations[currentLanguage].results.volume}: ${volume} ${unit}³</div>`;
+      }
+  
+      result.innerHTML = output;
+  }
+  
+  // Initialize
+  updateFields();
+  </script>
+<footer class="site-footer" id="colophon" itemscope itemtype="https://schema.org/WPFooter">
+  <div class="footer-wrap">
+    <div class="footer-columns">
+      <div class="footer-column">
+        <aside class="footer-widget" aria-label="Footer Widget 1">
+          <figure class="wp-block-image">
+            <img loading="lazy" decoding="async" src="img/logo07.png" alt="Logo" class="footer-logo">
+          </figure>
+          <p> M² ENGINEERING's goal is to provide a fast and 
+            easy engineering calculation experience for our website visitors.</p>
+          <figure class="wp-block-image">
+            <img loading="lazy" decoding="async" src="img/stripe-badge-white.png" alt="Stripe Badge" class="stripe-badge">
+          </figure>
+        </aside>
+      </div>
+      <div class="footer-column">
+        <aside class="footer-widget" aria-label="Footer Widget 2">
+          <h3> Quick Links </h3>
+          <nav aria-label="Links">
+            <ul class="menu">
+              <li><a class="Home page" href="Home_page.html">Home</a></li>
+              <li><a class="Calculations" href="Calculations.html" class="Calculations">Calculations</a></li>  
+              <li><a class="Book_a_consult" href="Home_page.html#contactForm">Book a consult</a></li>
+            </ul>
+          </nav>
+        </aside>
+      </div>
+      <div class="footer-column">
+        <aside class="footer-widget" aria-label="Footer Widget 3">
+          <h3> Company </h3>
+          <nav aria-label="Categories">
+            <ul class="menu">
+              <li><a href="Home_page.html#Mission"> Mission </a></li>
+              <li><a href="Home_page.html#Vision"> Vision </a></li>
+              <li><a href="Home_page.html#Developer"> Developer </a></li>
+
+            </ul>
+          </nav>
+        </aside>
+      </div>
+      <script data-search-pseudo-elements defer src="icon-families.json"></script>
+      <div class="footer-column">
+        <aside class="footer-widget" aria-label="Footer Widget 4">
+          <h3> Other </h3>
+          <p>Follow Us On Social Media </p>
+          <ul class="social-links">
+            <li><a href="https://wa.me"><i class="fa-brands fa-whatsapp"></i></a></li>
+            <li><a href="https://t.me/yourtelegramusername"><i class="fa-brands fa-telegram"></i></a></li>  
+            <li><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/salem.abdul.radi"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="salem.abdulradi@gmail.com"><i class="fa-solid fa-envelope"></i></a></li> 
+          </ul>
+        </aside>
+      </div>
+    </div>
+    <div class="footer-below">  <hr color="gray" >
+
+      <div class="footer-below-inner">
+        <p> Copyright &copy; 2025 M² ENGINEERING</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
