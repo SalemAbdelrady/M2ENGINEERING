@@ -1,0 +1,709 @@
+<!--
+Name: Salem Abdelrady Salem Aly
+ID : 1951710316
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>M² ENGINEERING.com</title>
+  
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <style>
+    /* Reset and Base */
+    body, ul, li, h1, a, nav, div, form {
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      font-family: "Cairo", sans-serif;
+    }
+    :root {
+      --primary: #1a73e8;
+      --secondary: #34a853;
+      --accent: #fbbc05;
+      --danger: #ff6b6b;
+      --dark: #1a1a1a;
+      --light: #f8f9fa;
+      --overlay: rgba(255, 255, 255, 0.05);
+    }
+    body {
+      background-color: #ECE9E5;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url("img/bannar002.png") no-repeat center center/cover fixed;
+      color: var(--light);
+      min-height: 100vh;
+      direction: ltr;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      width: 100%;
+      height: 60px;
+      background-color: #ECE9E5;
+      z-index: 1;
+      text-align: center;
+      top: 0;
+
+    }
+    header img {
+      position: absolute;
+      left: 90px;
+      top: 2px;
+      max-width: 18%;
+    }
+    .main-nav {
+      float: right;
+      padding: 12px 30px;
+    }
+    .main-nav > ul > li {
+      display: inline-block;
+      margin: 0;
+      list-style: none;
+    }
+    .main-nav li a {
+      text-decoration: none;
+      font-size: 19px;
+      color: black;
+      padding: 4px 25px;
+      border-radius: 28.8px;
+      display: inline-block;
+    }
+    .main-nav > ul > li:hover a {
+      background-color: #92B3C2;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+    }
+    .hero-title {
+      font-size: 4.5rem;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+    }
+
+    /* Banner */
+    .banner {
+      background-color: #ECE9E5;
+      position: relative;
+    }
+    .banner img {
+      max-width: 80%;
+      margin-top: 55px;
+      left: 140px;
+      position: relative;
+      border-radius: 10.8px;
+    }
+    .banner .banner_Welcome {
+      background-color: #01555231;
+      color: #015552;
+      padding: 30px;
+      position: absolute;
+      left: 35%;
+      top: 35%;
+      text-align: center;
+    }
+    .banner h2 {
+      font-size: 40px;
+      font-family: serif;
+    }
+
+    /* Main */
+
+    main {
+      max-width: 100%;
+      width: 1200px;
+      margin: 80px auto;
+      padding: 0 40px;
+      box-sizing: border-box;
+      text-align: left;
+      
+    }
+    .ar1 {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      /*  */
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+
+    }
+    .ar1 img {
+      max-width: 345px;
+      margin: 0 50px;
+      transition: transform 0.3s;
+
+      flex: 1;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .ar1 img:hover {
+      transform: translateY(-10px);
+    }
+    .content {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      flex: 1;
+      color: #000;
+
+    }
+    .content h2 {
+      color: #043052;
+    }
+
+.ar1 .content {
+  flex: 1;
+}
+
+/* Arrangement on small screens*/
+@media (max-width: 768px) {
+  .ar1 {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+    /*###############__________________________notification__________________________###############*/
+
+    .notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4BB543; /* اللون الافتراضي للنجاح */
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.4s, transform 0.4s;
+}
+.notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.notification.error {
+  background-color: #E74C3C; /* لون الخطأ */
+}
+
+
+    /*###############__________________________developer-box__________________________###############*/
+
+    .developer-box {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+  transition: transform 0.3s ease;
+
+}
+     .developer-box:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+      }
+.developer-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.developer-content {
+  flex: 1;
+}
+
+.developer-content h2 {
+  margin-bottom: 10px;
+}
+
+.developer-content p {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.linkedin-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0077B5;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.linkedin-button:hover {
+  background-color: #005582;
+}
+
+/* Form */
+.form-container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-top: 40px;
+  color: #000;
+  gap: 20px; 
+}
+
+.form-container img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container form {
+  flex: 1;
+  min-width: 280px;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container label {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.form-container button {
+  background: linear-gradient(45deg, #007BFF, #0056b3);
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-container button:hover {
+  background: linear-gradient(45deg, #0056b3, #003f7f);
+}    
+
+/*###############________________________For animation classes________________________###############*/
+.hidden {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.8s ease-out;
+}
+
+.hidden-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s ease-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Optional: Smooth page scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/*###############__________________________footer__________________________###############*/
+
+.footer-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #282828;
+  color: #fff;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-column {
+  text-align: center;
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-widget h3 {
+  color: #92B3C2;
+}
+
+.footer-widget .menu {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-widget .menu li {
+  margin: 5px 0;
+}
+
+.footer-widget .menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-widget .menu a:hover {
+  text-decoration: underline;
+}
+
+.footer-below {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-logo, .stripe-badge {
+  max-width: 100%;
+  height: auto;
+}
+
+.social-links {
+  list-style-type: none;
+  padding: 0;
+}
+.social-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-links a {
+  font-size: 35px;
+  color: white;
+  border-radius: 28.8px;
+  border-top-color: #eee;
+}
+
+.social-links a:hover{
+  background-color: #92B3C2;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="img/logo000.png" alt="logo">
+  <nav class="main-nav">
+    <ul>
+      <li><a href="Home_page.html">Home</a></li>
+      <li><a href="Calculations.html">Calculations</a></li>
+      <li><a class="Book_a_consult" href="Home_page.html#contactForm">Book a consult</a></li>
+    </ul>
+  </nav>
+</header>
+
+<hr>
+
+<section class="hero-section">
+  <div class="container text-center" data-aos="fade-up">
+    <h1 class="hero-title mb-3">Precise engineering calculations</h1>
+    <p class="lead text-accent mb-4">Accurate results • Exceptional User Experiences • Engineering Consulting</p>
+    <a href="Calculations.html" class="btn btn-lg rounded-pill px-5 mt-4" style="background: linear-gradient(45deg, var(--primary), var(--secondary)); color: white;">
+      Start now <i class="bi bi-rocket-takeoff ms-2"></i>
+    </a>
+  </div>
+</section>
+
+<main>
+  <div class="ar1" id="Mission">
+    <div class="content">
+      <h2>Our Mission:</h2>
+      <h4>M² ENGINEERING: Your gateway to reliable engineering services.</h4>
+
+      <p>Our mission is to provide a seamless, reliable, 
+        and intuitive platform for performing accurate engineering calculations across various shapes 
+        and measurement units. We are committed to delivering expert engineering consultations, 
+        ensuring that every project — from concept to completion — is built on a foundation of precision, 
+        efficiency, and trust. Our dedicated team stands ready to support all your engineering challenges 
+        with clarity and excellence.</p>  
+    </div>
+    <img src="img/im003.png" alt="Image">
+  </div>
+
+  <div class="ar1" id="Vision">
+    <img src="img/im002.jpg" alt="Image">
+    <div class="content">
+      <h2>Our Vision:</h2>
+      <p>At M² ENGINEERING, our vision is to be the leading online platform for precise 
+        engineering calculations and consulting services, empowering engineers, students, 
+        and professionals with accurate tools and expert guidance for all their design and analysis needs</p>
+
+        <P> Start your experience with us, 
+          our team is ready to help you make the best decisions that suit your business needs.</p>
+    </div>
+  </div>
+  <!--
+  <div class="section" id="Mission">
+    <div class="content">
+      <h2>Our Mission:</h2>
+      <h4>M² ENGINEERING: Your gateway to reliable engineering services.</h4>
+      <p>Our mission is to provide a seamless, reliable, and intuitive platform for performing accurate engineering calculations across various shapes and measurement units. We are committed to delivering expert engineering consultations, ensuring that every project — from concept to completion — is built on a foundation of precision, efficiency, and trust. Our dedicated team stands ready to support all your engineering challenges with clarity and excellence.</p>  
+    </div>
+    <div class="image-container">
+      <img src="img/im003.png" alt="Mission Image">
+    </div>
+  </div>
+  
+  <div class="section" id="Vision">
+    <div class="image-container">
+      <img src="img/im002.jpg" alt="Vision Image">
+    </div>
+    <div class="content">
+      <h2>Our Vision:</h2>
+      <p>At M² ENGINEERING, our vision is to be the leading online platform for precise engineering calculations and consulting services, empowering engineers, students, and professionals with accurate tools and expert guidance for all their design and analysis needs.</p>
+      <p>Start your experience with us, our team is ready to help you make the best decisions that suit your business needs.</p>
+    </div>
+  </div>
+  -->
+
+  <div id="notification" class="notification"></div>
+  <div class="form-container">
+    <h2>Contact Us</h2>
+    <img src="img/v02.png" alt="Image">
+    <form id="contactForm">
+      <label>Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label>Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label>Your message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <button type="submit" >Submit</button>
+    </form>
+  </div>
+
+
+  <div class="developer-box" id="Developer">
+    <img src="img/Salem.jpg" alt="Developer Photo" class="developer-photo">
+    
+    <div class="developer-content">
+      <h2>About the Developer</h2>
+      <p>Hello! I'm Salem Abdelrady, a web developer and a senior at the Arab Open University, Egypt branch. 
+        I created the M² ENGINEERING website as part of my TT284 course requirements. 
+        It's a website dedicated to engineering calculations and consulting. 
+        This project, along with others I've created, has given me experience in web development 
+        and the ability to solve problems more quickly. I strive to create easy-to-use, accurate, 
+        and reliable platforms that enable users to confidently achieve their goals.</p>
+      
+      <a href="https://www.linkedin.com/in/salem-abdelrady-8b318b272/" target="_blank" class="linkedin-button">
+        Connect with me on LinkedIn
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<!-- JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init('poLaqcT2_86N1NwGt'); //  For Public Key 
+  })();
+</script>
+
+<script>
+    AOS.init({ duration: 1000, once: true });
+
+// Scroll header color change
+const header = document.querySelector('header');
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY;
+  header.style.backgroundColor = scrollPosition > 2 ? 'white' : '#ECE9E5';
+});
+
+// Contact form handler
+function showNotification(message, isError = false) {
+  const notification = document.getElementById('notification');
+  notification.textContent = message;
+  
+  if (isError) {
+    notification.classList.add('error');
+  } else {
+    notification.classList.remove('error');
+  }
+
+  notification.classList.add('show');
+
+  setTimeout(() => {
+    notification.classList.remove('show');
+  }, 3000); // Disappears after 3 seconds
+}
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  emailjs.sendForm('service_2rb1tfe', 'template_sup71p3', this)
+    .then(function() {
+      showNotification('Message sent successfully ✅ تم إرسال البيانات بنجاح');
+      document.getElementById('contactForm').reset();
+    }, function(error) {
+      showNotification('An error occurred while sending, please try again later ❌ حدث خطأ أثناء الإرسال، الرجاء المحاولة لاحقاً', true);
+      console.log('FAILED...', error);
+    });
+});
+
+</script>
+
+
+<!--________________________For animation classes________________________-->
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  document.querySelectorAll('.content').forEach(el => {
+    el.classList.add('hidden');
+    observer.observe(el);
+  });
+
+  document.querySelectorAll('.ar1 img, .form-container img, .developer-photo').forEach(img => {
+    img.classList.add('hidden-left');
+    observer.observe(img);
+  });
+</script>
+
+
+<footer class="site-footer" id="colophon" itemscope itemtype="https://schema.org/WPFooter">
+  <div class="footer-wrap">
+    <div class="footer-columns">
+      <div class="footer-column">
+        <aside class="footer-widget" aria-label="Footer Widget 1">
+          <figure class="wp-block-image">
+            <img loading="lazy" decoding="async" src="img/logo07.png" alt="Logo" class="footer-logo">
+          </figure>
+          <p> M² ENGINEERING's goal is to provide a fast and 
+            easy engineering calculation experience for our website visitors.</p>
+          <figure class="wp-block-image">
+            <img loading="lazy" decoding="async" src="img/stripe-badge-white.png" alt="Stripe Badge" class="stripe-badge">
+          </figure>
+        </aside>
+      </div>
+      <div class="footer-column">
+        <aside class="footer-widget" aria-label="Footer Widget 2">
+          <h3> Quick Links </h3>
+          <nav aria-label="Links">
+            <ul class="menu">
+              <li><a class="Home page" href="Home_page.html">Home</a></li>
+              <li><a class="Calculations" href="Calculations.html" class="Calculations">Calculations</a></li>  
+              <li><a class="Book_a_consult" href="Home_page.html#contactForm">Book a consult</a></li>
+            </ul>
+          </nav>
+        </aside>
+      </div>
+      <div class="footer-column">
+        <aside class="footer-widget" aria-label="Footer Widget 3">
+          <h3> Company </h3>
+          <nav aria-label="Categories">
+            <ul class="menu">
+              <li><a href="Home_page.html#Mission"> Mission </a></li>
+              <li><a href="Home_page.html#Vision"> Vision </a></li>
+              <li><a href="Home_page.html#Developer"> Developer </a></li>
+
+            </ul>
+          </nav>
+        </aside>
+      </div>
+      <script data-search-pseudo-elements defer src="icon-families.json"></script>
+      <div class="footer-column">
+        <aside class="footer-widget" aria-label="Footer Widget 4">
+          <h3> Other </h3>
+          <p>Follow Us On Social Media </p>
+          <ul class="social-links">
+            <li><a href="https://wa.me"><i class="fa-brands fa-whatsapp"></i></a></li>
+            <li><a href="https://t.me/yourtelegramusername"><i class="fa-brands fa-telegram"></i></a></li>  
+            <li><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/salem.abdul.radi"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="salem.abdulradi@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>  
+          </ul>
+        </aside>
+      </div>
+    </div>
+    <div class="footer-below">  <hr color="gray" >
+
+      <div class="footer-below-inner">
+        <p> Copyright &copy; 2025 M² ENGINEERING</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
